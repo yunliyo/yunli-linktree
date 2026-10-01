@@ -33,5 +33,35 @@ useSeoMeta({
 			padding: 1rem 5vw;
 		}
 	}
+
+	// 打印时解除视口高度与滚动容器限制，让内容完整分页输出
+	@media print {
+		display: block;
+		height: auto;
+
+		> .content {
+			overflow: visible;
+
+			> main {
+				padding: 0;
+			}
+		}
+	}
+}
+
+@page {
+	margin: 12mm 10mm;
+}
+
+// 打印时统一为白底浅色，避免深色模式输出深色背景
+@media print {
+	:root,
+	:root.dark,
+	:root.light {
+		--c-bg: #FFF;
+
+		background-color: #FFF;
+		color-scheme: light;
+	}
 }
 </style>

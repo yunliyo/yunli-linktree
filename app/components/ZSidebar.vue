@@ -86,6 +86,10 @@ function toggleChildren(item: NavItem) {
 		cursor: pointer;
 	}
 
+	@media print {
+		display: none;
+	}
+
 	@media (max-width: $breakpoint-mobile) {
 		position: fixed;
 		left: 0;

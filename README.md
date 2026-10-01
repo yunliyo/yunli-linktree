@@ -2,7 +2,10 @@
 
 基于 Nuxt.js 开发的链接聚合（link in bio/linktree）主页。
 
-> *感谢开源项目 [L33Z22L11/homepage-v5](https://github.com/L33Z22L11/homepage-v5)*
+> *感谢开源项目*：
+>
+> 1. [L33Z22L11/homepage-v5](https://github.com/L33Z22L11/homepage-v5)
+> 2. [resume.bikari.top](https://github.com/KazariEX/resume.bikari.top)
 
 ## 预览图
 

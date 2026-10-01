@@ -28,6 +28,10 @@ const sidebarStore = useSidebarStore()
 		flex-grow: 1;
 		padding: 0 0.7em;
 	}
+
+	@media print {
+		display: none;
+	}
 }
 
 #toggle-sidebar {

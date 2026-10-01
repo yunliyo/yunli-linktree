@@ -41,6 +41,7 @@ export default defineAppConfig({
 					children: [
 						{ icon: 'material-symbols:terminal', text: '工作室', url: '/studio' },
 						{ icon: 'ri:id-card-line', text: '名片', url: '/vcard' },
+						{ icon: 'ph:read-cv-logo', text: '简历', url: '/resume' },
 					],
 				},
 				],
