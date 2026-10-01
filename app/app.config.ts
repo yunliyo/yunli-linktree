@@ -18,7 +18,7 @@ export default defineAppConfig({
 	// 用于在主页展示下游引用
 	fork: [
 		{
-			img: 'https://www.cswu.cn/_upload/article/images/3b/dc/1d40eef14ae6bd954a67b3e1dad1/e4667539-a310-4208-b145-c71758f8a4b8.jpg',
+			img: 'https://www.cqc.edu.cn/_upload/article/images/ae/fa/d4ccb1354a1eaec841cc392ee476/981f28c3-6838-4b10-ae86-8c4cc8e9c489.png',
 			link: 'https://www.cqc.edu.cn/',
 			text: '重庆城市管理职业大学',
 		},
@@ -34,7 +34,16 @@ export default defineAppConfig({
 				{ icon: 'ri:planet-line', text: '站点', url: '/site' },
 				{ icon: 'ri:history-line', text: '日志', url: '/log' },
 				{ icon: 'ri:link-m', text: '友链', url: '/friends' },
-			],
+				{
+					icon: 'ix:about',
+					text: '关于',
+					url: '#',
+					children: [
+						{ icon: 'material-symbols:terminal', text: '工作室', url: '/studio' },
+						{ icon: 'ri:id-card-line', text: '名片', url: '/vcard' },
+					],
+				},
+				],
 		},
 		{
 			title: '社交',
@@ -46,6 +55,7 @@ export default defineAppConfig({
 		{
 			title: '其他',
 			items: [
+				{ icon: 'mi:warning', text: '免责声明', url: '/disclaimer' },
 				{ icon: 'ri:shield-check-line', text: '隐私政策', url: '/privacy-policy' },
 				{ icon: 'ri:file-text-line', text: '用户协议', url: '/terms-of-use' },
 			],

@@ -1,6 +1,26 @@
 <script setup lang="ts">
+import type { NavItem } from '~/types/nav'
+
 const appConfig = useAppConfig()
 const sidebarStore = useSidebarStore()
+const route = useRoute()
+
+const expandedMenus = ref<string[]>([])
+
+watch(() => route.path, (path) => {
+	for (const group of appConfig.nav) {
+		for (const item of group.items) {
+			if (item.children?.some(child => path === child.url || path.startsWith(`${child.url}/`)) && !expandedMenus.value.includes(item.url))
+				expandedMenus.value.push(item.url)
+		}
+	}
+}, { immediate: true })
+
+function toggleChildren(item: NavItem) {
+	expandedMenus.value = expandedMenus.value.includes(item.url)
+		? expandedMenus.value.filter(url => url !== item.url)
+		: [...expandedMenus.value, item.url]
+}
 </script>
 
 <template>
@@ -17,11 +37,27 @@ const sidebarStore = useSidebarStore()
 			</h2>
 			<menu>
 				<li v-for="(item, itemIndex) in group.items" :key="itemIndex">
-					<ZRawLink v-slot="{ external }" :to="item.url" class="aside-nav-item">
+				<div v-if="item.children" class="aside-nav-group">
+					<button class="aside-nav-item aside-nav-parent" type="button" @click="toggleChildren(item)">
 						<Icon :name="item.icon" />
 						<span class="nav-text">{{ item.text }}</span>
-						<Icon v-if="external" class="external-tip" name="ri:arrow-right-up-line" />
-					</ZRawLink>
+						<Icon class="submenu-arrow" :class="{ expand: expandedMenus.includes(item.url) }" name="ri:arrow-down-s-line" />
+					</button>
+					<ul v-show="expandedMenus.includes(item.url)" class="aside-submenu">
+						<li v-for="(child, childIndex) in item.children" :key="childIndex">
+							<ZRawLink v-slot="{ external }" :to="child.url" class="aside-nav-item">
+								<Icon :name="child.icon" />
+								<span class="nav-text">{{ child.text }}</span>
+								<Icon v-if="external" class="external-tip" name="ri:arrow-right-up-line" />
+							</ZRawLink>
+						</li>
+					</ul>
+				</div>
+				<ZRawLink v-else v-slot="{ external }" :to="item.url" class="aside-nav-item">
+					<Icon :name="item.icon" />
+					<span class="nav-text">{{ item.text }}</span>
+					<Icon v-if="external" class="external-tip" name="ri:arrow-right-up-line" />
+				</ZRawLink>
 				</li>
 			</menu>
 		</template>
@@ -148,6 +184,34 @@ const sidebarStore = useSidebarStore()
 	.external-tip {
 		opacity: 0.5;
 		font-size: 1em;
+	}
+}
+
+.aside-nav-parent {
+	width: 100%;
+	border: none;
+	background: none;
+	font: inherit;
+	color: inherit;
+	text-align: start;
+	cursor: pointer;
+
+	.submenu-arrow {
+		flex-shrink: 0;
+		color: var(--c-text-3);
+		transition: rotate 0.2s;
+
+		&.expand {
+			rotate: 180deg;
+		}
+	}
+}
+
+.aside-submenu {
+	padding-left: 1.5em;
+
+	.aside-nav-item {
+		font-size: 0.95em;
 	}
 }
 

@@ -21,7 +21,7 @@ const toolSites: Array<CardProps> = [
 		name: '个人博客',
 		nameAlt: '馀事做诗人',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://blog.liqiang.info/' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://liqiang.info/' },
 			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/yunliyo' },
 		],
 		desc: '使用 Nuxt Content 开发的个人博客。',

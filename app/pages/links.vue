@@ -28,10 +28,8 @@ const socialLinks: LinkItem[] = [
 ]
 
 const linkButtons: LinkItem[] = [
-  { text: '博客', url: 'https://blog.liqiang.info', icon: 'ri:file-list-3-line', desc: '记录技术与生活' },
+  { text: '博客', url: 'https://liqiang.info', icon: 'ri:file-list-3-line', desc: '记录技术与生活' },
   { text: '简历', url: 'https://resume.liqiang.info', icon: 'ph:briefcase', desc: '我的个人简历' },
-  { text: 'Linux命令大全', url: 'https://linux.liqiang.info', icon: 'ri:terminal-line', desc: 'Linux命令手册' },
-  { text: '犹为君', url: 'https://boe.icu', icon: 'ph:planet', desc: '让我们生活的世界充满诗意' },
   { text: '赞助支持', icon: 'ri:hand-heart-line', desc: '感谢你的支持', qr: '/donate.png' },
 ]
 </script>
@@ -113,6 +111,19 @@ const linkButtons: LinkItem[] = [
       </a>
     </template>
   </nav>
+
+  <div class="custom-text">
+      <p>
+        我，是一个普通大学培育的普通的学生，在普通的公司做着普通的工作。
+        热爱诗词书画，喜欢折腾，尝试不同的新鲜事物。
+        但是我的心并不想这样普通下去，我想向上冲，不断学习，看看外面的世界。
+      </p>
+  </div>
+
+  <footer class="linktree-footer">
+      <Icon name="ph:linktree-logo" size="22" class="footer-icon" />
+      <p>写代码是酷爱，写诗词是热爱，写到宇宙充满爱！</p>
+  </footer>
 
   <Teleport to="#z-root">
     <Transition name="qr-fade">
@@ -298,6 +309,41 @@ const linkButtons: LinkItem[] = [
 
   .linktree-btn {
     padding: 0.75rem 1rem;
+  }
+}
+
+/* ========== 自定义文案 ========== */
+.custom-text {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--c-text-2);
+  text-align: justify;
+  border: 3px solid var(--c-border-light, #e5e7eb);
+  border-radius: 10px;
+}
+
+/* ========== 底部 ========== */
+.linktree-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+
+  .footer-icon {
+    color: var(--c-text-3, #9ca3af);
+    opacity: 0.5;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--c-text-3, #9ca3af);
   }
 }
 

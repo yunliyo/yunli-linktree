@@ -40,7 +40,7 @@ const friends: Friend[] = [
 	{ name: 'idealclover', desc: 'Stay simple, stay naive.', url: 'https://idealclover.top/', avatar: 'https://image.idealclover.cn/blog/assets/icon.png' },
 	{ name: 'ViKi', desc: '大道至简。', url: 'https://blog.viki.moe/', avatar: 'https://blog.viki.moe/avatar.png' },
 	{ name: '王烨', desc: '解密文档技术，精研技术写作，评说行业百态。', url: 'https://www.tcblabber.cn/', avatar: 'https://www.tcblabber.cn/favicon.ico' },
-	{ name: '重城职大', desc: '重庆城市管理职业大学', url: 'https://www.cqc.edu.cn/', avatar: 'https://www.cswu.cn/_upload/article/images/3b/dc/1d40eef14ae6bd954a67b3e1dad1/e4667539-a310-4208-b145-c71758f8a4b8.jpg' },
+	{ name: '重城职大', desc: '重庆城市管理职业大学', url: 'https://www.cqc.edu.cn/', avatar: 'https://www.cqc.edu.cn/_upload/article/images/ae/fa/d4ccb1354a1eaec841cc392ee476/981f28c3-6838-4b10-ae86-8c4cc8e9c489.png' },
 	{ name: '南洋吟游', desc: '上海交通大学国学社', url: 'https://sjtuguoxue.space/', avatar: 'https://sjtuguoxue.space/static/favicon.ico' },
 ]
 
@@ -53,7 +53,7 @@ const homepageConfig = {
 	timeZone: 'Asia/Shanghai',
 	favicon: '/icon/avatar.jpg',
 	url: 'https://liqiang.info',
-	blogAtom: 'https://blog.liqiang.info/atom.xml',
+	blogAtom: 'https://liqiang.info/atom.xml',
 	friends,
 }
 
