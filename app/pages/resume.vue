@@ -198,7 +198,7 @@ const projects: ResumeEntry[] = [
 ]
 
 const extras: string[] = [
-	'热爱诗词书画，有个人作品集《猗兰集》《愚顽集》《明漪集》《兰蓠集》。',
+	'热爱诗词书画，有个人作品集《明漪集》。',
 ]
 
 function isUrl(url?: string) {
