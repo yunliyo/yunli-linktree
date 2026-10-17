@@ -18,7 +18,7 @@ export default defineAppConfig({
 	// 用于在主页展示下游引用
 	fork: [
 		{
-			img: 'https://www.cqc.edu.cn/_upload/article/images/ae/fa/d4ccb1354a1eaec841cc392ee476/981f28c3-6838-4b10-ae86-8c4cc8e9c489.png',
+			img: 'https://www.cqc.edu.cn/_upload/article/images/ae/fa/d4ccb1354a1eaec841cc392ee476/ef6ae7bb-52f4-4737-8d55-0436e640e11e.png',
 			link: 'https://www.cqc.edu.cn/',
 			text: '重庆城市管理职业大学',
 		},
@@ -30,6 +30,7 @@ export default defineAppConfig({
 			items: [
 				{ icon: 'ri:id-card-line', text: '简介', url: '/' },
 				{ icon: 'ph:linktree-logo', text: '链树', url: '/links' },
+				{ icon: 'tabler:social', text: '链阵', url: '/media' },
 				{ icon: 'ri:code-line', text: '项目', url: '/project' },
 				{ icon: 'ri:planet-line', text: '站点', url: '/site' },
 				{ icon: 'ri:history-line', text: '日志', url: '/log' },

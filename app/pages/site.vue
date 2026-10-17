@@ -10,7 +10,7 @@ const toolSites: Array<CardProps> = [
 		name: '个人网站（已归档）',
 		nameAlt: '风月一闲人',
 		buttons: [
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/yunliyo/yunli-old' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://old.liqiang.info' },
 		],
 		desc: [
 			'留作纪念，第一版个人网站，模仿',

@@ -29,7 +29,7 @@ const socialLinks: LinkItem[] = [
 
 const linkButtons: LinkItem[] = [
   { text: '博客', url: 'https://liqiang.info', icon: 'ri:file-list-3-line', desc: '记录技术与生活' },
-  { text: '简历', url: 'https://resume.liqiang.info', icon: 'ph:briefcase', desc: '我的个人简历' },
+  { text: '新媒体矩阵', url: '/media', icon: 'tabler:social', desc: '一襟月色，只为君来' },
   { text: '赞助支持', icon: 'ri:hand-heart-line', desc: '感谢你的支持', qr: '/donate.png' },
 ]
 </script>
